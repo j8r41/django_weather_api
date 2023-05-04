@@ -1,3 +1,18 @@
+Targeted at:
+- Basic knowledge of Python;
+- Work with APIs;
+- Working with HTML and CSS.
+
+Task:
+Create a simple web application for displaying information about the current weather in a specified city. It should have the following functionality:
+- The user should be able to enter the name of the city in a search form.
+- The application should use an API to retrieve weather data for the specified city from a service (e.g., openweathermap.org).
+- The application should display the current weather in the specified city, providing information on temperature, humidity, pressure, wind direction and speed.
+- The design of the application should be visually appealing and user-friendly. You can use HTML, CSS, and JavaScript to create the user interface.
+- If possible, you can provide information on weather forecasts for the next few days.
+
+Evaluation of the task is subjective and will depend on how well the candidate solves the set tasks, as well as how accurately and quickly the task is completed.
+
 Направленное на: 
 - Знание основ Python;
 - Работа с API;
