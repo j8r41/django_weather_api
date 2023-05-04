@@ -20,4 +20,4 @@ def index(request):
             context["wind_kph"] = data["current"]["wind_kph"]
             context["wind_dir"] = data["current"]["wind_dir"]
 
-        return render(request, "weather/index.html", context=context)
+    return render(request, "weather/index.html", context=context)
