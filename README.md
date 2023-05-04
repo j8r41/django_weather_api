@@ -1,9 +1,13 @@
 # Django Weather App
-Django weather forecast search web app
+Django weather forecast search web app.
 
 ## About
 
 This app allows users to obtain information about the current weather forecast for a required city using API.
+
+## Task
+[Here](https://github.com/j8r41/django_weather_api/blob/dev/task.txt)
+
 
 ## Getting Started
 
