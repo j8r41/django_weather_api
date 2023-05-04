@@ -1,17 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
-  <form action="{% url 'index' %}" method="get">
-    <label for="City">City:</label>
-    <input type="text" name="city" id="city" />
-    <input type="submit" value="Get Weather">
-  </form>
-  <div>
-    {% if name %}
-      <p>{{ name }}</p>
-      <p>{{ region }}</p>
-      <p>{{ country }}</p>
-      <p>{{ temp_c }}</p>
-    {% endif %}
-  </div>
-{% endblock content %}
+  <div class='container'>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Weather App</h3>
+              {% if error %}<div class="alert alert-danger text-center" role="alert">{{ error }}</div>{% endif %}
+              <form method="get" action="{% url 'index' %}">
+                <div class="mb-3">
+                  <label for="city" class="form-label">City:</label>
+                  <input type="text" class="form-control" id="city" name="city">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Get Weather</button>
+                </div>
+              </form>
+              {% if city %}
+                <hr>
+                <h5 class="card-title text-center my-4">
+                  <img src="{{ condition_icon }}" alt="">
+                  {{ city }}, {{ region }}, {{ country }}
+                </h5>
+                <div class="row justify-content-between">
+                  <div class="col-md-6">
+                    <p>
+                      <b>Temperature:</b> {{ temp_c }}°C
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>
+                      <b>Fells like:</b> {{ feelslike_c }}°C
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>
+                      <b>Conditions:</b> {{ condition_text }}
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>
+                      <b>Wind:</b> {{ wind_dir }} {{ wind_kph }} km/h
+                    </p>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock content %}
+</div>
 blockofcode
