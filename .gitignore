@@ -305,3 +305,6 @@ pip-selfcheck.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,django,venv,database
+
+# My adds:
+json_ex.json

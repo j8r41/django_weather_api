@@ -19,5 +19,7 @@ def index(request):
             context["condition_icon"] = data["current"]["condition"]["icon"]
             context["wind_kph"] = data["current"]["wind_kph"]
             context["wind_dir"] = data["current"]["wind_dir"]
+            context["humidity"] = data["current"]["humidity"]
+            context["pressure_mb"] = data["current"]["pressure_mb"]
 
     return render(request, "weather/index.html", context=context)

@@ -20,5 +20,5 @@ def get_weather_request(q_object):
 
 
 if __name__ == "__main__":
-    data = get_weather_request('sda')
+    data = get_weather_request('Moscow')
     print(data)
