@@ -1,6 +1,17 @@
-{% extends "base.html" %} {% block content %}
-<form action="post">
-  <input type="text" />
-  <button>Send</button>
-</form>
+{% extends "base.html" %}
+{% block content %}
+  <form action="{% url 'index' %}" method="get">
+    <label for="City">City:</label>
+    <input type="text" name="city" id="city" />
+    <input type="submit" value="Get Weather">
+  </form>
+  <div>
+    {% if name %}
+      <p>{{ name }}</p>
+      <p>{{ region }}</p>
+      <p>{{ country }}</p>
+      <p>{{ temp_c }}</p>
+    {% endif %}
+  </div>
 {% endblock content %}
+blockofcode

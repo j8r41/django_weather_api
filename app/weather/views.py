@@ -3,11 +3,12 @@ from .utils import weather_api_request
 
 
 def index(request):
-    return render(request, "weather/index.html")
-
-
-def get_weatherforecast_data(request):
-    data = weather_api_request.get_weather_request("Kirov")
-    return render(
-        request, "weather/get_weatherforecast_data.html", context=data
-    )
+    context = {}
+    city = request.GET.get("city")
+    if city:
+        data: dict = weather_api_request.get_weather_request(city)
+        context["name"] = data["location"]["name"]
+        context["region"] = data["location"]["region"]
+        context["country"] = data["location"]["country"]
+        context["temp_c"] = data["current"]["temp_c"]
+    return render(request, "weather/index.html", context=context)
