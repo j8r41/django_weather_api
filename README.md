@@ -50,6 +50,3 @@ SECRET_KEY=django-insecure-...
 $ cd app/
 $ python3 manage.py runserver
 ```
-## Developers
-
-- [j8r41](https://github.com/j8r41)
